@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 export interface Props {
@@ -7,12 +7,22 @@ export interface Props {
 }
 
 const Question = ({ title, info }: Props) => {
+
+  const [showInfo, setShowInfo] = useState<Boolean>(false);
+
   return (
     <article className='question'>
       <header>
         <h4> {title} </h4>
-        <button className='btn'>btn</button>
+        <button className='btn' onClick={() => setShowInfo(!showInfo)}>
+          {
+            showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />
+          }
+        </button>
       </header>
+      {
+        showInfo && <p> {info} </p>
+      }
     </article>
   )
 }
