@@ -1,16 +1,19 @@
 import React from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
-interface Props {
+export interface Props {
   title: string;
   info: string;
 }
 
 const Question = ({ title, info }: Props) => {
   return (
-    <>
-      <h1>Hi</h1>
-    </>
+    <article className='question'>
+      <header>
+        <h4> {title} </h4>
+        <button className='btn'>btn</button>
+      </header>
+    </article>
   )
 }
 
