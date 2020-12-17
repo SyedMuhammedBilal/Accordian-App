@@ -9,7 +9,7 @@ function App() {
   return (
     <main>
       <div className='container'>
-        <h3>Hello</h3>
+        <h3>Question Cards</h3>
         <section className='info'>
           {questions.map((question) => {
             return (
