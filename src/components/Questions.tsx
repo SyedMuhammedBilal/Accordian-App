@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
-const Question = () => {
+interface Props {
+  title: string;
+  info: string;
+}
+
+const Question = ({ title, info }: Props) => {
   return (
     <>
       <h1>Hi</h1>
